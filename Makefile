@@ -19,3 +19,6 @@ lint:
 run:
 	pipenv run python -m main
 
+.PHONY: tests
+tests:
+	pipenv run python -m pytest tests -rP
