@@ -11,3 +11,10 @@ This repository provides a basic Python project template, ideal for quick setup 
 
 ## Usage
 Use the template and modify the existing structure to suit your project needs.
+
+## Updates
+
+python3.11
+- Faster CPython
+- Enhanced Error Messages
+- Type Hints and Annotations, etc
