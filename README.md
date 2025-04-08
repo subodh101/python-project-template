@@ -14,7 +14,20 @@ Use the template and modify the existing structure to suit your project needs.
 
 ## Updates
 
-python3.11
-- Faster CPython
-- Enhanced Error Messages
-- Type Hints and Annotations, etc
+### python3.12
+
+**Faster Python:**
+Improved performance via Faster CPython and Profile-Directed Optimization (PDO).
+
+**New Features:**
+frozenmap: Immutable hashable mapping type.
+@typing.override: Marks method overrides explicitly.
+Better Typing: Direct use of NoneType in type hints.
+
+**Improved Error Messages:**
+More helpful debugging information.
+
+### Makefile
+
+Add `make fl` for running format and lint.
+Add `make flt` for running format, lint and tests.

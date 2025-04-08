@@ -15,6 +15,9 @@ lint:
 	pipenv run isort --check --diff .
 	pipenv run black --check --diff .
 
+.PHONY: fl
+fl: fmt lint
+
 .PHONY: run
 run:
 	pipenv run python -m main
@@ -22,3 +25,6 @@ run:
 .PHONY: tests
 tests:
 	pipenv run python -m pytest tests -rP
+
+.PHONY: flt
+flt: fmt lint tests
