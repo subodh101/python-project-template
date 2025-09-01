@@ -1,3 +1,20 @@
+[project]
+name = "python-project-template"
+version = "0.1.0"
+description = ""
+requires-python = ">=3.12"
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "click", 
+    "flake8",
+    "isort",
+    "pytest",
+    "mypy",
+]
+
 [tool.black]
 line-length = 127
 
