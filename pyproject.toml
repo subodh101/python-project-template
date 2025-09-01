@@ -7,22 +7,6 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = [
-    "black",
-    "click", 
-    "flake8",
-    "isort",
+    "pre-commit",
     "pytest",
-    "mypy",
 ]
-
-[tool.black]
-line-length = 127
-
-[tool.isort]
-include_trailing_comma = true
-line_length = 127
-multi_line_output = 3
-use_parentheses = true
-
-[tool.mypy]
-ignore_missing_imports = true

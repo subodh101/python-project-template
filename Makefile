@@ -1,21 +1,11 @@
 .PHONY: dep
 dep:
 	uv sync --extra dev
+	uv run pre-commit install
 
 .PHONY: fmt
 fmt:
-	uv run black .
-	uv run isort .
-
-.PHONY: lint
-lint:
-	uv run mypy .
-	uv run flake8 .
-	uv run isort --check --diff .
-	uv run black --check --diff .
-
-.PHONY: fl
-fl: fmt lint
+	uv run pre-commit run --all-files
 
 .PHONY: run
 run:
@@ -25,5 +15,5 @@ run:
 tests:
 	uv run python -m pytest tests -rP
 
-.PHONY: flt
-flt: fmt lint tests
+.PHONY: ft
+ft: fmt tests
