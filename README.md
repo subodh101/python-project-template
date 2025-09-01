@@ -6,7 +6,7 @@ This repository provides a basic Python project template, ideal for quick setup 
 ## Features
 - **Workflow Configurations:** Automated testing and linting workflows in `.github/workflows` for multiple python versions.
 - **Testing Setup:** Ready-to-use test cases in `tests` directory.
-- **Essential Files:** Includes `.flake8`, `.gitignore`, `Pipfile`, `pyproject.toml`.
+- **Essential Files:** Includes `.pre-commit-config.yaml`, `.gitignore`, `pyproject.toml`.
 - **Python Scripts:** Sample `main.py` and `utils.py` for a quick start.
 
 ## Usage
@@ -29,5 +29,6 @@ More helpful debugging information.
 
 ### Makefile
 
-Add `make fl` for running format and lint.
-Add `make flt` for running format, lint and tests.
+Uses UV for fast dependency management and pre-commit for code quality.
+Add `make fmt` for running format and lint.
+Add `make ft` for running format, lint and tests.
