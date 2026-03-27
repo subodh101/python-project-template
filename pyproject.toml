@@ -7,6 +7,19 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = [
+    "bandit[toml]",
+    "pip-audit",
     "pre-commit",
     "pytest",
+    "ruff",
 ]
+
+[tool.ruff]
+line-length = 127
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]

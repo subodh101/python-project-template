@@ -1,4 +1,4 @@
-def concatenate_strings(str1: str, str2: str):
+def concatenate_strings(str1: str, str2: str) -> str:
     """
     Concatenates two given strings.
 

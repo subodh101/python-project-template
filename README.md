@@ -4,15 +4,20 @@
 This repository provides a basic Python project template, ideal for quick setup and efficient development.
 
 ## Features
-- **Workflow Configurations:** Automated testing and linting workflows in `.github/workflows` for multiple python versions.
+- **Workflow Configurations:** Automated testing, linting, `pip-audit`, and `bandit` in `.github/workflows` for multiple Python versions.
+- **Dependabot:** Weekly PRs for pip ([pyproject.toml](pyproject.toml)) and GitHub Actions.
 - **Testing Setup:** Ready-to-use test cases in `tests` directory.
-- **Essential Files:** Includes `.pre-commit-config.yaml`, `.gitignore`, `pyproject.toml`.
+- **Essential Files:** Includes `.pre-commit-config.yaml` (Ruff + mypy), `.gitignore`, `pyproject.toml`.
 - **Python Scripts:** Sample `main.py` and `utils.py` for a quick start.
 
 ## Usage
 Use the template and modify the existing structure to suit your project needs.
 
 ## Updates
+
+### Dependabot and `uv.lock`
+
+Dependabot may update [pyproject.toml](pyproject.toml) only. After merging or applying those changes, run `uv lock` (or `uv lock --upgrade-package <name>`) and commit the updated [uv.lock](uv.lock) so installs and CI stay in sync.
 
 ### python3.12
 

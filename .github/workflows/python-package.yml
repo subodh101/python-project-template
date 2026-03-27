@@ -28,6 +28,12 @@ jobs:
       - name: Install dependencies
         run: uv sync --extra dev
 
+      - name: Audit dependencies
+        run: uv run pip-audit --ignore-vuln CVE-2026-4539
+
+      - name: Run bandit
+        run: uv run bandit -r . -c pyproject.toml
+
       - name: Run pre-commit (format & lint)
         run: uv run pre-commit run --all-files
 
